@@ -1,0 +1,150 @@
+main{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#divForm{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+fieldset{
+    padding: 8px;
+    margin-top: 15px;
+    border: 3px solid silver;
+}
+main h2{
+    width: 100%;
+    text-align: center;
+    font-style: oblique;
+}
+label{
+    display: block;
+    margin-top: 2px;
+}
+input{
+    border-radius: 5px;
+    border:none;
+    background-color: rgba(0,0,0,0.2);
+}
+.boton{
+    margin-top:2%;
+    color: white;
+    border-radius: 0%;
+    border: none;
+    font-size: small;
+}
+#botones_form{
+    text-align: center;
+}
+#btnGuardar:hover{
+    background-color: rgba(68, 220, 150, 1);
+}
+#btnEliminar{
+    display: none;
+}
+#btnEliminar:hover{
+    background-color: rgba(240, 50, 20, 1);
+}
+#btnCancelar{
+    display: none;
+}
+#btnCancelar:hover{
+    background-color: rgba(30, 80, 230, 1);
+}
+span{
+    display: none;
+}
+.divTabla{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.tablaListado, .tablaListado th, .tablaListado td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.tablaListado thead
+{
+    background-color: aqua;
+}
+.iconos{
+    width: 20px;
+    height: 20px;
+}
+.cbo{
+    justify-content: left;
+}
+header, footer{
+    color: white;
+}
+#headerDiv{
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+li{
+    padding-right: 5px;
+    text-decoration: none;
+    list-style: none;
+}
+#logo{
+    width: 100px;
+    margin-left: 5px;
+
+}
+#autoMain{
+    width: 90%;
+    height: 180px;
+}
+#divGuardar img{
+    margin-top: 5%;
+    width: auto;
+    height: 15px;
+}
+#spinner{
+    display: block;
+    padding-top: 10px;
+    margin: auto;
+}
+#sectorPromedio{
+    width: 80%;
+    margin: auto;
+    border-width: 2px;
+    border-style: solid;
+    border-color: silver;
+}
+#filtroPromedio
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1%;
+}
+#selectFiltros{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.filtros{
+    width: fit-content;
+}
+.filtros p{
+    width: fit-content;
+}
+.filtros input{
+    width: 100%;
+    margin: auto;
+}
+form
+{
+    border: none;
+}
+.col{
+    text-align: end;
+}
+.dropdown{
+    align-self: center;
+}

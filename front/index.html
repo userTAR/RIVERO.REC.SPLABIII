@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="index.css">
+        <script type="module" src="../javascript/logica.js"></script>
+    <title>Parcial FRONTEND</title>
+</head>
+<body id="body">
+    <header>
+        <div id="headerDiv">
+            <img id="logo" src="../resources/logo.png" alt="">
+            <nav>
+                <ul>
+                    <li>Nostros</li>
+                    <li>Anuncios</li>
+                    <li>Blog</li>
+                    <li>Contacto</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div id="divForm">
+            <h2>Administración</h2>
+            <img id="autoMain" src="../resources/yarisGr-ultrawide-recorte.jpg" alt="yaris">
+            <form action="" id="formulario">
+                <fieldset>
+                    <legend>Información Del Anuncio</legend>
+                    <input type="text" id="txtId" readonly style="display: none;">
+                    <label for="txtTitulo">TITULO:</label>
+                    <input type="text" name="txtTitulo" id="txtTitulo" placeholder="Título"><span id="spanTitulo">*</span>
+                    <label for="">TRANSACCION:</label>
+                    <label class="cbo" for="cboVenta">Venta</label>
+                    <input type="radio" name="cboVenta" id="cboVenta" value="venta" checked>
+                    <label class="cbo" for="cboAlquiler">Alquiler</label>
+                    <input type="radio" name="cboVenta" id="cboAlquiler" value="alquiler">
+                    <label for="txtDescripcion">DESCRIPCION:</label>
+                    <input type="text" name="txtDescripcion" id="txtDescripcion" placeholder="Descripcion"><span id="spanDescripcion">*</span>
+                    <label for="txtPrecio">PRECIO:</label>
+                    <input type="number" name="txtPrecio" id="txtPrecio" placeholder="Precio"><span id="spanPrecio">*</span>
+                    <label for="txtPuertas"><img class="iconos" src="../resources/puerta.png" alt=""></label>
+                    <input type="number" name="txtPuertas" id="txtPuertas" placeholder="Puertas"><span id="spanPuertas">*</span>
+                    <label for="txtKm"><img class="iconos" src="../resources/dashboard.png" alt=""></label>
+                    <input type="number" name="txtKm" id="txtKm" min="0" placeholder="Km's"><span id="spanKm">*</span>
+                    <label for="txtPotencia"><img class="iconos" src="../resources/horsepower.png" alt=""></label>
+                    <input type="number" name="txtPotencia" id="txtPotencia" min="0" placeholder="Potencia"><span id="spanPotencia">*</span>
+                </fieldset>
+                <div id="botones_form">
+                    <div id="divGuardar">
+                        <img src="../resources/save.png" alt="">
+                        <input class="boton btn btn-success" id="btnGuardar" type="button" value="GUARDAR">
+                    </div>
+                    <input class="boton btn btn-danger" id="btnEliminar" type="button" value="ELIMINAR">
+                    <input class="boton btn btn-primary" id="btnCancelar" type="button" value="CANCELAR">
+                </div>
+            </form>
+        </div>
+        <img id="spinner" src="">
+        <div class="divTabla" id="divTabla"></div>
+        <p class="text-center">FILTROS</p>
+        <div id="sectorPromedio">
+            <div id="filtroPromedio">
+                <div class="dropdown">
+                    <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FILTRAR TRANSACCION</button>
+                    <div class="dropdown-menu">
+                        <option id="optN/A" class="dropdown-item" value="N/A">TODOS</option>
+                        <option id="optVenta" class="dropdown-item" value="venta">VENTA</option>
+                        <option id="optAlquiler" class="dropdown-item" value="alquiler">ALQUILER</option>
+                    </div>
+                </div>
+                <div>
+                    <label id='labelPromedio' for="txtPromedio">PROMEDIO</label>
+                    <input type="text" name="txtPromedio" id="txtPromedio" readonly>
+                    <label id='labelMaximo' for="txtMaximo">PRECIO MAXIMO</label>
+                    <input type="text" name="txtMaximo" id="txtMaximo" readonly>
+                    <label id='labelMinimo' for="txtMinimo">PRECIO MINIMO</label>
+                    <input type="text" name="txtMinimo" id="txtMinimo" readonly>
+                    <label id='labelPotencia' for="txtPotencia">PROMEDIO POTENCIA</label>
+                    <input type="text" name="txtPotencia" id="txtPromedioPotencia" readonly>
+                </div>
+            </div>
+        </div>
+        <div id="selectFiltros">
+            <div class="filtros">
+                <p>TITULO</p>
+                <input type="checkbox" name="cbkTitulo" id="cbkTitulo">
+            </div>
+            <div class="filtros">
+                <p>TRANSACCION</p>
+                <input type="checkbox" name="cbkTransaccion" id="cbkTransaccion">
+            </div>
+            <div class="filtros">
+                <p>DESCRIPCION</p>
+                <input type="checkbox" name="cbkDescripcion" id="cbkDescripcion">
+            </div>
+            <div class="filtros">
+                <p>PRECIO</p>
+                <input type="checkbox" name="cbkPrecio" id="cbkPrecio">
+            </div>
+            <div class="filtros">
+                <p>NUMERO PUERTAS</p>
+                <input type="checkbox" name="cbkNumPuertas" id="cbkNumPuertas">
+            </div>
+            <div class="filtros">
+                <p>NUMERO KILOMETROS</p>
+                <input type="checkbox" name="cbkNumKms" id="cbkNumKms">
+            </div>
+            <div class="filtros">
+                <p>POTENCIA</p>
+                <input type="checkbox" name="cbkPotencia" id="cbkPotencia">
+            </div>
+        </div>
+        <div class="divTabla" id="divTablaFiltrada">
+        </div>
+
+    </main>
+    <footer>
+        <div class="container" style="background-color : rgb(28, 28, 155); width:95%; height: 100px;">
+            <div class="row">
+                <div class="col">Nosotros</div>
+            </div>
+            <div class="row">
+                <div class="col">Anuncios
+                </div>
+            </div>
+            <div class="row">
+                <div class="col ">Blog</div>
+            </div>
+            <div class="row">
+                <div class="col">Todos los Derechos Reservados 2019 ©</div>
+                <div class="col">Contacto</div>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

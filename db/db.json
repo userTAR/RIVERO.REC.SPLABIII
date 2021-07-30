@@ -1,0 +1,34 @@
+{
+  "Autos": [
+    {
+      "id": 3,
+      "titulo": "Ford Focus",
+      "transaccion": "venta",
+      "descripcion": "bajo",
+      "precio": "500000",
+      "num_puertas": "4",
+      "num_KMs": "45000",
+      "potencia": "170"
+    },
+    {
+      "id": 4,
+      "titulo": "Fiat Palio",
+      "transaccion": "venta",
+      "descripcion": "chico",
+      "precio": "350000",
+      "num_puertas": "5",
+      "num_KMs": "88000",
+      "potencia": "89"
+    },
+    {
+      "id": 5,
+      "titulo": "Renault Fluence",
+      "transaccion": "alquiler",
+      "descripcion": "grande",
+      "precio": "15000",
+      "num_puertas": "4",
+      "num_KMs": "115000",
+      "potencia": "140"
+    }
+  ]
+}
